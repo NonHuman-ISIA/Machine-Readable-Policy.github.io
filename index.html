@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a s k a w a y</title>
+  <link rel="icon" href="images/Icon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../bootstrap-custom.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex align-items-center justify-content-center min-vh-100">
+  <div class="container px-4 text-center">
+    <h1 id="landing-title">ciao!</h1>
+    <h2 id="landing-sub"> chiedimi tutto </h2>
+    <form id="ask-form" class="d-flex flex-column flex-sm-row justify-content-center gap-2">
+      <input type="text" class="form-control ask-input" placeholder="Fai una domanda..." required>
+      <button type="submit" class="btn ask-btn"> <svg width="26" height="23" viewBox="0 0 26 23" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.47648e-06 9.85714L1.33286e-06 13.1429L19.5 13.1429L19.5 16.4286L22.75 16.4286L22.75 13.1429L26 13.1429L26 9.85714L22.75 9.85714L22.75 6.57143L19.5 6.57143L19.5 9.85714L1.47648e-06 9.85714ZM16.25 3.28571L19.5 3.28571L19.5 6.57143L16.25 6.57143L16.25 3.28571ZM16.25 3.28571L13 3.28571L13 -5.68248e-07L16.25 -4.26186e-07L16.25 3.28571ZM16.25 19.7143L19.5 19.7143L19.5 16.4286L16.25 16.4286L16.25 19.7143ZM16.25 19.7143L13 19.7143L13 23L16.25 23L16.25 19.7143Z"
+            fill="#C1DEF9" />
+        </svg>
+      </button>
+    </form>
+
+    <video id="animation-video" autoplay muted playsinline>
+      <source src="images/NEWsearching.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    const pages = [
+      "randomPages/pagina1.html", "randomPages/pagina2.html", "randomPages/pagina3.html",
+      "randomPages/pagina4.html", "randomPages/pagina5.html", "randomPages/pagina6.html",
+      "randomPages/pagina7.html", "randomPages/pagina8.html", "randomPages/pagina9.html", "randomPages/pagina10.html"
+    ];
+
+    const form = document.getElementById('ask-form');
+    const video = document.getElementById('animation-video');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      form.style.display = 'none';      // nascondo form
+      video.style.display = 'block';    // mostro il video
+      video.play();
+    });
+
+    // al termine del video reindirizza
+    video.addEventListener('ended', () => {
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.location.href = randomPage;
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
