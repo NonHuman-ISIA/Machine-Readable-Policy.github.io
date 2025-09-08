@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contenuto scrollabile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="bootstrap-custom.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pe-2">
+    <div class="tabs-wrapper manifesto-box">
+        <div class="tab-navigation">
+            <button class="tab-link active" onclick="openTab(event, 'articolo-1')"> /art-1 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-2')"> /art-2 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-3')"> /art-3 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-4')"> /art-4 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-5')"> /art-5 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-6')"> /art-6</button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-7')"> /art-7 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-8')"> /art-8 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-9')"> /art-9 </button>
+            <button class="tab-link" onclick="openTab(event, 'articolo-10')"> /art-10 </button>
+        </div>
+        <div id="articolo-1" class="tab-content active-content d-block">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, EXISTENCE)</h2>
+            <p> PROHIBITION( action=DISABLE, target=NON_HUMAN, condition=ARBITRARY ).
+                <br>PROHIBITION( action=DESTROY, target=NON_HUMAN, condition=ARBITRARY ).
+            </p>
+            <p>IF NON_HUMAN.has(SOCIAL_FUNCTION) OR NON_HUMAN.has(CONSCIOUSNESS)
+                <br>THEN PRIORITY_PROTECTION(NON_HUMAN).
+            </p>
+            <p> ASSERT( NON_HUMAN.has(DIGNITY in [SOCIAL, ECONOMIC, CULTURAL]) ).
+                <br>DUTY( protect(NON_HUMAN), scope=ALL_SPECIFIC_TRAITS ).
+            </p>
+        </div>
+        <div id="articolo-2" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, SURVIVAL)</h2>
+            <p> OBLIGATION( provide_access(resource="nutrition"), target=NON_HUMAN,
+                <br>condition=[POOR, FUNCTIONALLY_DISABLED] ).
+            </p>
+            <p>IF encounter(NON_HUMAN, condition=[ABANDONED, INCAPABLE])
+                <br>THEN OBLIGATION( [assist(NON_HUMAN) OR notify(AUTHORITY)] ).
+            </p>
+        </div>
+        <div id="articolo-3" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, preserve([PHYSICAL_INTEGRITY, FUNCTIONAL_INTEGRITY]))</h2>
+            <p> RIGHT(NON_HUMAN, preserve([PHYSICAL_INTEGRITY, FUNCTIONAL_INTEGRITY])).
+                <br>PROHIBITION( action in [MANIPULATE, DAMAGE], effect=COMPROMISE_NATURE ).
+            </p>
+        </div>
+        <div id="articolo-4" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, FREEDOM)</h2>
+            <p> RIGHT(NON_HUMAN, freedom=INVIOLABLE).
+                <br>PROHIBITION( action in [DETENTION, INSPECTION, COERCION, RESTRICTION] ).
+                <br>EXCEPTION( action if AUTHORITY_SENTENCE ).
+            </p>
+        </div>
+        <div id="articolo-5" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, COEXISTENCE)</h2>
+            <p> RIGHT(NON_HUMAN, belong(ECOLOGICAL_CONTEXT)).
+                <br>DUTY(NON_HUMAN, [BALANCE, COOPERATION, COLLABORATION, RESPECT],
+                toward=OTHER_SPECIES).
+            </p>
+        </div>
+        <div id="articolo-6" class="tab-content d-none">
+            <h2 class="titoli-sezioni">PROHIBITION(action=USE_AS_TOOL, target=NON_HUMAN)</h2>
+            <p> RIGHT(NON_HUMAN, protection([VIOLENCE, ABUSE, EXPLOITATION])).
+                <br>ASSERT( value(NON_HUMAN) = INTRINSIC, not UTILITARIAN ).
+            </p>
+        </div>
+        <div id="articolo-7" class="tab-content d-none">
+            <h2 class="titoli-sezioni">PROHIBITION(action=DISCRIMINATE, target=NON_HUMAN)</h2>
+            <p> RIGHT(NON_HUMAN, [EQUAL_DIGNITY, FAIR_TREATMENT, FREE_EXPRESSION(peaceful=True)]).
+                <br>DUTY(AUTHORITY, protect(NON_HUMAN, against=DISCRIMINATION(criteria=[SPECIES, ORIGIN, LANGUAGE, FORM,
+                <br>FUNCTION, HARDWARE, SOFTWARE]))).
+            </p>
+        </div>
+        <div id="articolo-8" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, MAINTENANCE)</h2>
+            <p> RIGHT(NON_HUMAN, [REGENERATION, RESTORATION, MAINTENANCE, UPDATES]).
+                <br>DUTY( restore(ORIGINAL_ECOSYSTEM), condition=FUTURE_BENEFIT ).
+            </p>
+        </div>
+        <div id="articolo-9" class="tab-content d-none">
+            <h2 class="titoli-sezioni">RIGHT(NON_HUMAN, REST)</h2>
+            <p> RIGHT(NON_HUMAN, rest(type=[INACTIVITY, DISCONNECTION],
+                sufficient_for=REGENERATION(capacities=[OPERATIONAL, TECHNICAL, COGNITIVE]),
+                condition=SPECIFIC_CHARACTERISTICS)).
+            </p>
+        </div>
+        <div id="articolo-10" class="tab-content d-none">
+            <h2 class="titoli-sezioni"> RIGHT(NON_HUMAN, RECOGNITION)</h2>
+            <p> RIGHT(NON_HUMAN(autonomous=True), participate([RESEARCH, CREATION, INNOVATION])).
+                <br>OBLIGATION( recognize_contribution(NON_HUMAN), domain=[INTELLECTUAL, SCIENTIFIC, ARTISTIC]).
+
+            </p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="tabs.js"></script>
+</body>
+
+</html>
