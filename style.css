@@ -120,14 +120,19 @@ body {
     border-color: #71EEB7;
 }
 
+.ask-input:focus::placeholder {
+    color: #367875;
+}
+
 .ask-btn {
     margin-top: 1rem;
-    width: fit-content;
+    width: 3.7rem;
     border-radius: 5rem;
     border: 2px solid #C1DEF9;
     background: #1E212A;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: .75rem;
     box-shadow: 0 0 10px #C1DEF9;
 }
@@ -135,6 +140,10 @@ body {
 .ask-btn:hover {
     background: #71EEB7;
     box-shadow: 0 0 14px #71EEB7;
+}
+
+.ask-btn:hover svg path {
+    fill: #367875;
 }
 
 #animation-video {
@@ -302,6 +311,7 @@ a:active {
         width: 100px;
         margin-left: 1rem;
         margin-top: 1.2rem;
+        z-index: 5;
     }
 
 
@@ -316,7 +326,6 @@ a:active {
 
     .retro-box {
         max-width: 1000px;
-        /* height: 344px; */
         height: fit-content;
     }
 
